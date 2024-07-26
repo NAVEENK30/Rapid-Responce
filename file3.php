@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = $result->fetch_assoc();
         if (password_verify($password, $row['password_hash'])) {
             $_SESSION['user_id'] = $row['id'];
-            header("Location: dashboard.php"); // Redirect to dashboard or home page
+            header("Location: file2.php"); // Redirect to dashboard or home page
         } else {
             echo "Invalid password";
         }
